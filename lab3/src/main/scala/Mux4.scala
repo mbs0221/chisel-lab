@@ -20,7 +20,16 @@ class Mux4 extends Module {
   // and connect the input and output ports.
 
   // below is dummy code to make this example compile
-  io.y := io.c
+  io.y := 0.U
+  when (io.sel === 0.U) {
+    io.y := io.a
+  }.elsewhen (io.sel === 1.U) {
+    io.y := io.b
+  }.elsewhen (io.sel === 2.U) {
+    io.y := io.c
+  }.elsewhen (io.sel === 3.U) {
+    io.y := io.d
+  }
 
   // ***** your code ends here *****
 }
