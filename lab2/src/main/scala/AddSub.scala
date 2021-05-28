@@ -16,10 +16,12 @@ class AddSub extends Module {
   // ***** your code starts here *****
 
   // res := ????
+  res := a - b
+  when (io.selAdd) {
+    res := a + b
+  }
 
   // ***** your code ends here *****
 
   io.y := res
 }
-
-

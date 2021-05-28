@@ -16,6 +16,9 @@ class Mux2 extends Module {
   // ***** your code starts here *****
 
   res := b
+  when (io.sel === 0.U) {
+    res := a
+  }
 
   // ***** your code ends here *****
 
